@@ -1,0 +1,55 @@
+* {
+    box-sizing:border-box;
+}
+
+a {
+  color: #C45358 !important;
+  text-decoration: none
+}
+
+body,
+html {
+    height: 100%;
+  margin: 0;
+  background: url('background.jpg');
+  background-size: 100%;
+  color: white;
+  background-repeat: no-repeat;
+  background-attachment: fixed
+  
+}
+
+h1 {
+    border-bottom: 1px solid lightgrey;
+  padding-bottom: 10px;
+}
+
+.date,
+.info {
+    color: grey;
+}
+
+.comment:nth-child(even) {
+  
+}
+
+#content,
+#sidebar {
+    display: inline-block;
+  float: left;
+  padding: 20px;
+  height: 100%;
+}
+
+#content {
+    width: 70%;
+}
+
+#sidebar {
+    width: 30%;
+  
+}
+
+.reg{
+    background: url("F:/newsite/news/static/css/background.jpg")
+}

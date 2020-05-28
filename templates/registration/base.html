@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+ <title>{% block title %}{% endblock %}</title>
+ <link href="{% static 'css/news.css' %}" rel="stylesheet">
+</head>
+<body>
+
+{% if user.is_authenticated %}
+
+   {% else %}
+     <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
+     <p>or register now</p>
+        <form action="" method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Зарегистрировать">
+    <style type="text/css">
+    </form>
+   {% endif %}
+
+ <div id="content">
+  {% block content %}
+      {% endblock %}
+ </div>
+    <div id="sidebar">
+
+    </div>
+</body>
+</html>

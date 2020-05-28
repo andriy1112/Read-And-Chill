@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+ <title>{% block title %}{% endblock %}</title>
+ <link href="{% static 'css/news.css' %}" rel="stylesheet">
+</head>
+<body>
+ <div id="content">
+  {% block content %}
+      {% endblock %}
+    </div>
+ <div id="sidebar">
+ 	<h2>Chill</h2>
+ 	<iframe width="100%" height="36%" src="https://www.youtube.com/embed/jrTMMG0zJyI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+     {% if user.is_authenticated %}
+        User: {{ user.get_username }}
+        <p><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></p>
+     {% else %}
+        <a href="{% url 'login'%}?next={{request.path}}">Login</a>
+        <p></p>
+        <a href="accounts/register/">Register</a>
+     {% endif %}
+ </div>
+
+
+</body>
+</html>

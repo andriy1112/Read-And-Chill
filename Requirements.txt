@@ -16,7 +16,7 @@ django-modeltranslation==0.14.4
 django-recaptcha3==0.2.0
 django-registration==3.1
 django-templated-mail==1.1.1
-djangorestframework==3.11.0
+djangorestframework==3.11.2
 djangorestframework-simplejwt==4.4.0
 djoser==2.0.3
 generics==0.0.1.dev0
